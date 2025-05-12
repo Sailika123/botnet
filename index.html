@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botnet Attack Prediction</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://www.einfochips.com/wp-content/uploads/2022/05/Botnet_Attacks_How_IoT_Devices_become_Part_Victim_of_such_Attacks_Blog_Featured_Image-scaled-1.jpg'); /* Change this to your image path */
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-family: 'Georgia', serif;
+            color: #FFD700;
+        }
+        form {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #FFD700;
+            color: black;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #FFC107;
+        }
+    </style>
+</head>
+<body>
+    <h1>Botnet Attack Prediction Form</h1>
+    <form action="/predict" method="POST">
+        <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+            <div style="flex: 1 0 45%; margin: 10px;">
+                <label for="pkSeqID">pkSeqID:</label>
+                <input type="text" id="pkSeqID" name="pkSeqID" required>
+
+                <label for="proto">Protocol:</label>
+                <input type="text" id="proto" name="proto" required>
+
+                <label for="saddr">Source Address:</label>
+                <input type="text" id="saddr" name="saddr" required>
+
+                <label for="sport">Source Port:</label>
+                <input type="text" id="sport" name="sport" required>
+
+                <label for="daddr">Destination Address:</label>
+                <input type="text" id="daddr" name="daddr" required>
+
+                <label for="dport">Destination Port:</label>
+                <input type="text" id="dport" name="dport" required>
+            </div>
+            <div style="flex: 1 0 45%; margin: 10px;">
+                <label for="seq">Sequence:</label>
+                <input type="text" id="seq" name="seq" required>
+
+                <label for="stddev">Standard Deviation:</label>
+                <input type="text" id="stddev" name="stddev" step="0.01" required>
+
+                <label for="N_IN_Conn_P_SrcIP">N_IN_Conn_P_SrcIP:</label>
+                <input type="text" id="N_IN_Conn_P_SrcIP" name="N_IN_Conn_P_SrcIP" required>
+
+                <label for="min">Min:</label>
+                <input type="text" id="min" name="min" required>
+
+                <label for="state_number">State Number:</label>
+                <input type="text" id="state_number" name="state_number" required>
+
+                <label for="mean">Mean:</label>
+                <input type="text" id="mean" name="mean" step="0.01" required>
+
+                <label for="N_IN_Conn_P_DstIP">N_IN_Conn_P_DstIP:</label>
+                <input type="text" id="N_IN_Conn_P_DstIP" name="N_IN_Conn_P_DstIP" required>
+
+                <label for="drate">drate:</label>
+                <input type="text" id="drate" name="drate" step="0.01" required>
+
+                <label for="srate">srate:</label>
+                <input type="text" id="srate" name="srate" step="0.01" required>
+
+                <label for="max">Max:</label>
+                <input type="text" id="max" name="max" required>
+
+                <label for="category">Category:</label>
+                <input type="text" id="category" name="category" required>
+
+                <label for="subcategory">Subcategory:</label>
+                <input type="text" id="subcategory" name="subcategory" required>
+            </div>
+        </div>
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
